@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        b{
+        b {
             color: brown;
         }
+
         div {
             margin: 8px;
         }
@@ -18,9 +19,18 @@
             width: fit-content;
         }
 
-        fieldset{
-            color: darkolivegreen ;
-            margin: 8px;
+        fieldset {
+            color: darkolivegreen;
+            margin: 4px;
+        }
+        .container{
+            display: flex;
+
+        }
+
+        .container fieldset{
+            width: 50%;
+            
         }
     </style>
 </head>
@@ -28,11 +38,11 @@
 <body>
 
     <div>
-        <p>Good Morning / Afternoon ___,</p>
+        <p>Good Morning / Afternoon <input type="text" id="name_1"> Id: <input type="text" id="id_1"></p>
         <p>My name is Jonathan and I am calling from LSGS.<br>
             I was calling you to discuss an open opportunity that we
-            currently have for ___ which supports our CBP. 
-            <b>     <br>(321) 517 5014</b>
+            currently have for ___ which supports our CBP.
+            <b> <br>(321) 517 5014</b>
         </p>
         <p>Have you heard of LS before?</p>
         <p>LS is a military friendly, Orlando based
@@ -42,13 +52,16 @@
             And currently employee over 1000 healthcare professionals in TX, NM, AZ & CA.
         </p>
         <p>What I would like to do is share some details about position such as basic requirements and duties. </p>
-        
-        <fieldset>
-            <legend>Which location would you like?</legend>
-            TX <input checked="checked" type="checkbox" value ="tx" name="tx"> 
-            NM <input type="checkbox" value ="nm" name="nm"> 
-            AZ <input type="checkbox" value ="az" name="az"> 
-            CA <input type="checkbox" value ="ca" name="ca">
+
+        <fieldset id="location_1">
+            <legend>Location</legend>
+            TX <input checked="checked" type="checkbox" value="TX" name="tx">
+            NM <input checked="checked" type="checkbox" value="NM" name="nm">
+            AZ <input type="checkbox" value="AZ" name="az">
+            CA <input type="checkbox" value="CA" name="ca">
+            | |
+            Full-time <input type="checkbox" value="- Full-time" >
+            Part-time <input type="checkbox" value="- Part-time" >
         </fieldset>
 
         <ul>
@@ -59,96 +72,140 @@
             <li>low acuity treatment</li>
         </ul>
 
-        <p>Work requires walking, standing, bending and some lifting (for example to assist patients with wheelchairs)</p>
+        <p>Work requires walking, standing, bending and some lifting (for example to assist patients with wheelchairs)
+        </p>
 
-        <fieldset>
-            <legend>Do you have BLS certification for CPR? </legend>
-            AHA <input type="checkbox" value ="aha" name="aha"> 
-            ARC <input type="checkbox" value ="arc" name="arc"> 
-            ASHI <input type="checkbox" value ="ashi" name="ashi">
-        </fieldset>
 
-        <fieldset>
+
+        <div class="container">
+
+            <fieldset id="certification_1">
+                <legend>Certifications </legend>
+                *BLS <input type="checkbox" value="BLS">
+                CPR <input type="checkbox" value="CPR">
+                ACLS <input type="checkbox" value="ACLS">
+                NRP <input type="checkbox" value="NRP">
+                PALS <input type="checkbox" value="PALS">
+            </fieldset>
+            
+            <fieldset id="association_1">
+                <legend>BLS/CPR Association </legend>
+                AHA <input type="checkbox" value="AHA">
+                ARC <input type="checkbox" value="ARC">
+                ASHI <input type="checkbox" value="ASHI">
+            </fieldset>
+        </div>
+
+        <fieldset id="license_1">
             <legend>Is your license active? </legend>
-            EMT <input type="checkbox" value ="ent" name="ent"> 
-            NREMT <input type="checkbox" value ="nrent" name="nrent"> 
-            CNA <input type="checkbox" value ="cna" name="cna"> 
-            CMA <input type="checkbox" value ="cma" name="cma">
+            EMT <input type="checkbox" value="EMT" name="ent">
+            NREMT <input type="checkbox" value="NREMT" name="nrent">
+            CNA <input type="checkbox" value="CNA" name="cna">
+            CMA <input type="checkbox" value="CMA" name="cma">
         </fieldset>
 
-
-
-        <fieldset>
-            <legend>What type of employment are you seeking?</legend>
-            Fulltime <input type="checkbox" value ="fulltime" name="fulltime"> 
-            Parttime <input type="checkbox" value ="parttime" name="parttime"> 
+        <div class="container">
+        <fieldset id="bilingual_1">
+            <legend>Bilingual </legend>
+            Yes <input type="checkbox" value="YES" name="yes">
+            No <input type="checkbox" value="NO" name="no">
         </fieldset>
 
-        <fieldset>
-            <legend>1 year experience with all ages from infant thru geriatric</legend>
-            All ages <input type="checkbox" value ="all_ages_0_99" name="all_ages_0_99"> 
-
+        <fieldset id="shift_1">
+           
+            Full-time <input type="checkbox" value="- Full-time" >
+            Part-time <input type="checkbox" value="- Part-time" >
         </fieldset>
-        
-   <!-- <fieldset>
-            <legend>Do you have </legend>
-        </fieldset>
-    -->
-    <p>Based on our conversation, I believe you can be a great fit. 
-        What I would like to do now is tranfer you to a senior recruiter that can discuss all
-        the specifics of the job we have available. If we get disconnected, 
-        its name is... and the phone number ...  </p>
-    <p>I also like to confirm your email address is ... <br> 
-        I am going to send you and email to follow up on our conversation, 
-        so you have my contact information as well. </p>    
     </div>
-    <button onclick="">click It</button>
 
-    <div>Name: </div>
-    <div>Salesforce id: </div>
-    <div>Position: <span name=""></span></div>
-    <div>Location Interested In: </div>
-    <div>BLS: </div>
-    <div>License: </div>
-    <div>Bilingual: </div>
-    <div>Experience: </div>
-    <div>Ages Seen: </div>
-    <div>Best time: </div>
-    <div>Start Availability: </div>
-    
+        <div class="container">
+<!--Experience box -->
+        <fieldset id="experience_1">
+            <legend>Experience in the last 2 years </legend>
+            ER <input type="checkbox" value="ER">
+            Family Practice <input type="checkbox" value="Family Practice">
+            Urgent Care <input type="checkbox" value="Urgent Care">
+            
+        </fieldset>
+
+        <fieldset id="ages_1">
+            <legend>Ages Seen</legend>
+            *Pediatrics <input type="checkbox" value="Pediatrics 0-18">
+            *Geriatrics <input type="checkbox" value="Geriatrics">
+        </fieldset>
+        </div>
+
+
+
+      
+
+        
+
+   
+        <p>Based on our conversation, I believe you can be a great fit.
+            What I would like to do now is tranfer you to a senior recruiter that can discuss all
+            the specifics of the job we have available. If we get disconnected,
+            its name is... and the phone number ... </p>
+        <p>I also like to confirm your email address is ... <br>
+            I am going to send you and email to follow up on our conversation,
+            so you have my contact information as well. </p>
+    </div>
+
+
+    <button onclick="click_it()">click It</button>
+
+    <p>Name: <span id="name_2"></span></p>
+    <p>Salesforce id: <span id="id_2"></span></p>
+    <p>Position: <span id="position_2"></span></p>
+
+    <p>Location Interested In: <span id="location_2"></span> <span id="shift_2"></span> </p>
+    <p>Certifications: <span id="certification_2"></span></p>
+    <p>Association: <span id="association_2"></span></p>
+    <p>License: <span id="license_2"></span></p>
+    <p>Bilingual: <span id="bilingual_2"></span></p>
+
+    <p>Experience: <span id="experience_2"></span></p>
+    <p>Ages Seen: <span id="ages_2"></span></p>
+    <p>Best time: <span id="association_2"></span></p>
+    <p>Start Availability: <span id="association_2"></span></p>
+
+
+
 
 </body>
+
 <script>
+    function index(id_1, id_2){
+    let x = document.getElementById(id_1);
+    x = x.getElementsByTagName("input");
+var demo = document.getElementById(id_2);
+    demo.innerHTML ="";
 
-    function myfun(){
-        let x = document.getElementsByTagName("input");
-        let myArray =[];
-        for (let i = 0; i < x.length; i++) {
-            if (x[i].checked == true) {
-
-                myArray.push(x[i].value);
-                eval('var ' + myArray[i] + '=  myArray['+ i +'] ;');
-            }
-        }
-        return myArray;
-    }
-/*
-    let x = myfun();
-    
-    function jkl(){
-        
-        let another = "";
     for (let i = 0; i < x.length; i++) {
+        if (x[i].checked == true) {
+            demo.innerHTML += x[i].value + ", ";
+            
+        }
         
-       another =+ 'var '+ x[i] + '=' + x[i] + ';';
-       var 'x[+' i'+] + '=  x['+ i +'] ;'
     }
-    return another;
 }
-    
-    */
-    
 
+function click_it(){
+    document.getElementById("name_2").innerHTML = document.getElementById("name_1").value;
+    document.getElementById("id_2").innerHTML = document.getElementById("id_1").value;
+    
+    index("license_1", "position_2") // to get position name
+    index("location_1", "location_2")
+    index("shift_1", "shift_2")
+    index("certification_1", "certification_2")
+    index("association_1", "association_2")
+    index("license_1", "license_2")
+    index("bilingual_1", "bilingual_2")
+    index("experience_1", "experience_2")
+    index("ages_1", "ages_2")
+    
+}
 </script>
+<!-- <script src="index.js"></script> -->
 
 </html>
