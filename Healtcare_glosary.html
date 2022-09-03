@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input, label{margin: 4px;}
+
+        b{color: brown; text-transform: uppercase;}
+
+        span{line-height: 1.5; text-transform: capitalize;}
+
+        #header {position: sticky; top: 0; background: white;}
+
+        #acronym{font-style: capital;}
+
+        #meaning {width: 70%;}
+        
+        .container{margin: 12px;}
+
+    </style>
+</head>
+<body>
+    <div id="header" class="container">
+        <form >
+            <label for="acronym">Acronym</label>
+            <input type="text" id="acronym" name="acronym"><br>
+            <label for="meaning">Meaning</label>
+            <input type="text" id="meaning" name="meaning"><br>
+            <input type="button" onclick="print_new()" value="Click Me!">
+        </form>
+        <hr>
+    </div>
+
+    <div id="container" class="container"></div>
+    
+</body>
+<script>
+
+
+    function print_new() {
+        let acr = document.getElementById("acronym");
+    let mea = document.getElementById("meaning");
+    let cont = document.getElementById("container");
+
+        cont.innerHTML += '<span name='+acr.value +'><b>'+ acr.value + ': </b>' + mea.value +'</span><br>'
+    }
+    
+</script>
+</html>
