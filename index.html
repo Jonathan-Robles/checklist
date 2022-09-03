@@ -29,7 +29,7 @@
         }
 
         .container fieldset{
-            width: 50%;
+            width: min-content;
             
         }
     </style>
@@ -39,10 +39,10 @@
 
     <div>
         <p>Good Morning / Afternoon <input type="text" id="name_1"> Id: <input type="text" id="id_1"></p>
-        <p>My name is Jonathan and I am calling from LSGS.<br>
+        <p>My name is Jonathan and I am calling from LSGS. <b> (321) 517 5014</b> <br>
             I was calling you to discuss an open opportunity that we
             currently have for ___ which supports our CBP.
-            <b> <br>(321) 517 5014</b>
+            
         </p>
         <p>Have you heard of LS before?</p>
         <p>LS is a military friendly, Orlando based
@@ -52,18 +52,10 @@
             And currently employee over 1000 healthcare professionals in TX, NM, AZ & CA.
         </p>
         <p>What I would like to do is share some details about position such as basic requirements and duties. </p>
+        
+<div class="container">
 
-        <fieldset id="location_1">
-            <legend>Location</legend>
-            TX <input checked="checked" type="checkbox" value="TX" name="tx">
-            NM <input checked="checked" type="checkbox" value="NM" name="nm">
-            AZ <input type="checkbox" value="AZ" name="az">
-            CA <input type="checkbox" value="CA" name="ca">
-            | |
-            Full-time <input type="checkbox" value="- Full-time" >
-            Part-time <input type="checkbox" value="- Part-time" >
-        </fieldset>
-
+</div>
         <ul>
             <li>First aid and triage</li>
             <li>Secundary medical evaluation</li>
@@ -78,7 +70,20 @@
 
 
         <div class="container">
-
+            <fieldset id="location_1">
+                <legend>Location</legend>
+                TX <input type="checkbox" value="TX" name="tx">
+                NM <input type="checkbox" value="NM" name="nm">
+                AZ <input type="checkbox" value="AZ" name="az">
+                CA <input type="checkbox" value="CA" name="ca">
+            </fieldset>
+            <fieldset id="license_1">
+                <legend>Act_licenses</legend>
+                EMT <input type="checkbox" value="EMT" name="ent">
+                NREMT <input type="checkbox" value="NREMT" name="nrent">
+                CNA <input type="checkbox" value="CNA" name="cna">
+                CMA <input type="checkbox" value="CMA" name="cma">
+            </fieldset>
             <fieldset id="certification_1">
                 <legend>Certifications </legend>
                 *BLS <input type="checkbox" value="BLS">
@@ -89,64 +94,53 @@
             </fieldset>
             
             <fieldset id="association_1">
-                <legend>BLS/CPR Association </legend>
+                <legend>Associations </legend>
                 AHA <input type="checkbox" value="AHA">
                 ARC <input type="checkbox" value="ARC">
                 ASHI <input type="checkbox" value="ASHI">
             </fieldset>
         </div>
 
-        <fieldset id="license_1">
-            <legend>Is your license active? </legend>
-            EMT <input type="checkbox" value="EMT" name="ent">
-            NREMT <input type="checkbox" value="NREMT" name="nrent">
-            CNA <input type="checkbox" value="CNA" name="cna">
-            CMA <input type="checkbox" value="CMA" name="cma">
-        </fieldset>
+
 
         <div class="container">
-        <fieldset id="bilingual_1">
-            <legend>Bilingual </legend>
-            Yes <input type="checkbox" value="YES" name="yes">
-            No <input type="checkbox" value="NO" name="no">
-        </fieldset>
+            <fieldset id="experience_1">
+                <legend>Last_experience(2) </legend>
+                Urgent Care <input type="checkbox" value="Urgent Care">
+                Family Practice <input type="checkbox" value="Family Practice">
+                ER <input type="checkbox" value="ER">
+                
+            </fieldset>
+    
+            <fieldset id="ages_1">
+                <legend>All_ages_Seen</legend>
+                *Pediatrics <input type="checkbox" value="Pediatrics 0-18">
+                *Geriatrics <input type="checkbox" value="Geriatrics">
+            </fieldset>
 
-        <fieldset id="shift_1">
-           
-            Full-time <input type="checkbox" value="- Full-time" >
-            Part-time <input type="checkbox" value="- Part-time" >
-        </fieldset>
-    </div>
+            <fieldset id="bilingual_1">
+                <legend>Bilingual </legend>
+                Yes <input type="checkbox" value="YES" name="yes">
+                No <input type="checkbox" value="NO" name="no">
+            </fieldset>
+            <fieldset id="shift_1">
+                <legend>Shift_time </legend>
+                Full <input type="checkbox" value="- Full-time" >
+                Part <input type="checkbox" value="- Part-time" >
+            </fieldset>
+        </div>
 
         <div class="container">
 <!--Experience box -->
-        <fieldset id="experience_1">
-            <legend>Experience in the last 2 years </legend>
-            ER <input type="checkbox" value="ER">
-            Family Practice <input type="checkbox" value="Family Practice">
-            Urgent Care <input type="checkbox" value="Urgent Care">
-            
-        </fieldset>
-
-        <fieldset id="ages_1">
-            <legend>Ages Seen</legend>
-            *Pediatrics <input type="checkbox" value="Pediatrics 0-18">
-            *Geriatrics <input type="checkbox" value="Geriatrics">
-        </fieldset>
-        </div>
-
-
-
-      
-
         
+        </div>      
 
    
         <p>Based on our conversation, I believe you can be a great fit.
             What I would like to do now is tranfer you to a senior recruiter that can discuss all
             the specifics of the job we have available. If we get disconnected,
             its name is... and the phone number ... </p>
-        <p>I also like to confirm your email address is ... <br>
+        <p>I also like to confirm your email address is <input type="text" id="name_1"> <br>
             I am going to send you and email to follow up on our conversation,
             so you have my contact information as well. </p>
     </div>
@@ -159,14 +153,17 @@
     <p>Position: <span id="position_2"></span></p>
 
     <p>Location Interested In: <span id="location_2"></span> <span id="shift_2"></span> </p>
+    
     <p>Certifications: <span id="certification_2"></span></p>
     <p>Association: <span id="association_2"></span></p>
     <p>License: <span id="license_2"></span></p>
+    
     <p>Bilingual: <span id="bilingual_2"></span></p>
 
     <p>Experience: <span id="experience_2"></span></p>
     <p>Ages Seen: <span id="ages_2"></span></p>
-    <p>Best time: <span id="association_2"></span></p>
+    
+    <p>Contact best time: <span id="association_2"></span></p>
     <p>Start Availability: <span id="association_2"></span></p>
 
 
@@ -175,20 +172,20 @@
 </body>
 
 <script>
-    function index(id_1, id_2){
+
+function index(id_1, id_2){
     let x = document.getElementById(id_1);
-    x = x.getElementsByTagName("input");
-var demo = document.getElementById(id_2);
-    demo.innerHTML ="";
+        x = x.getElementsByTagName("input");
+    var demo = document.getElementById(id_2);
+        demo.innerHTML ="";
 
     for (let i = 0; i < x.length; i++) {
         if (x[i].checked == true) {
             demo.innerHTML += x[i].value + ", ";
-            
         }
-        
     }
 }
+
 
 function click_it(){
     document.getElementById("name_2").innerHTML = document.getElementById("name_1").value;
