@@ -9,7 +9,7 @@
     <style>
         input, label{margin: 4px;}
 
-        b{color: brown; text-transform: uppercase;}
+        .brown{color: brown; text-transform: uppercase;}
 
         span{line-height: 1.5; text-transform: capitalize;}
 
@@ -57,7 +57,7 @@
         }else{
             localStorage.setItem(acr.value , 
             `<span name="${acr.value}">
-                <b>${acr.value}: </b>
+                <b class="brown">${acr.value}: </b>
                 ${mea.value}</span><br>`)
         }
 
